@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animator</title>
+    <link rel="stylesheet" href="animator.css">
+    <style>
+        .container {
+            display: grid;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .bordered {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="hi" class="invisible animator-element" animator-action="appear-disappear">Hi!</div>
+    <div id="im-chris" class="invisible animator-element" animator-trigger="hi" animator-action="appear-disappear" >I'm Chris</div>
+    <div class="invisible animator-element" animator-trigger="im-chris" animator-action="appear-disappear">How are you? :)</div>
+</div>
+
+<script src="animator.js"></script>
+</body>
+</html>

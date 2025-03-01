@@ -1,50 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>deml.dev</title>
-  <style>
-body {
-  background-color: black;
-  color: white;
-  text-align: center;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
-}
-
-main {
-  font-size: 2rem;
-  font-family: monospace;
-
-  &::after {
-    content: "";
-    animation: dots 1s infinite;
-  }
-}
-
-@keyframes dots {
-  0% {
-    content: "";
-  }
-  33% {
-    content: ".";
-  }
-  66% {
-    content: "..";
-  }
-  100% {
-    content: "...";
-  }
-}
-  </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="animator/animator.css">
 </head>
 <body>
-<header></header>
-<main>site is under construction</main>
-<footer></footer>
+<header class="invisible after-text" data-classes-after-text="invisible">
+    <nav>
+        <a href="index.html">deml.dev</a>
+        <div id="themes">
+            <span id="themes-placeholder">themes</span>
+            <span class="hidden theme" data-value="theme-dark">dark</span>
+            <span class="hidden theme" data-value="theme-light">light</span>
+            <span class="hidden theme" data-value="theme-colorful">colorful</span>
+        </div>
+    </nav>
+</header>
+<main>
+    <span id="current-text"></span>
+    <div id="actions" class="invisible after-text tile glow">
+        <p>the funny way</p>
+        <span>you can learn more about me by clicking one of the following links</span>
+        <div id="links">
+            <a href="terminal.html">terminal</a>
+            <a href="#">HR-Site</a>
+            <a href="#">2D-Game</a>
+        </div>
+    </div>
+    <div id="tldr" class="invisible after-text tile glow">
+        <p>the quick way</p>
+        <span>click <a href="#">here</a> to get all the information about me as a zipped folder</span>
+    </div>
+</main>
+<footer class="invisible after-text">
+    <a href="impressum.html">impressum</a>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/themes.js"></script>
+<script src="animator/animator.js"></script>
 </body>
 </html>

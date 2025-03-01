@@ -1,0 +1,57 @@
+
+.theme-dark {
+    --background: rgb(30, 30, 30);
+    --color: white;
+    --glowing: rgba(255, 255, 255, 0.5);
+    --shadow: rgba(0, 0, 0, 0.25);
+    --accent: rgba(50, 50, 50, 0.25);
+    --current-text-background: repeating-linear-gradient(
+            66deg,
+            hsl(0, 100%, 60%),
+            hsl(50, 100%, 60%) 10px,
+            hsl(100, 100%, 60%) 20px,
+            hsl(150, 100%, 60%) 30px,
+            hsl(200, 100%, 60%) 40px,
+            hsl(250, 100%, 60%) 50px,
+            hsl(300, 100%, 60%) 60px
+    );
+}
+
+.theme-light {
+    --glowing: rgba(0, 0, 0, 0.75);
+    --shadow: rgba(255, 255, 255, 0.25);
+    --accent: rgba(150, 150, 150, 0.25);
+    --current-text-background: repeating-linear-gradient(
+            66deg,
+            hsl(0, 100%, 40%),
+            hsl(50, 100%, 40%) 10px,
+            hsl(100, 100%, 40%) 20px,
+            hsl(150, 100%, 40%) 30px,
+            hsl(200, 100%, 40%) 40px,
+            hsl(250, 100%, 40%) 50px,
+            hsl(300, 100%, 40%) 60px
+    );
+}
+
+.theme-colorful {
+    --background: repeating-linear-gradient(
+            66deg,
+            hsl(0, 100%, 30%),
+            hsl(0, 100%, 30%) 100px,
+            hsl(50, 100%, 30%) 200px,
+            hsl(100, 100%, 30%) 300px,
+            hsl(150, 100%, 30%) 400px,
+            hsl(200, 100%, 30%) 500px,
+            hsl(250, 100%, 30%) 600px,
+            hsl(300, 100%, 30%) 700px
+    );
+    --color: black;
+    --glowing: rgba(255, 255, 255, 0.4);
+    --shadow: var(--glowing);
+    --accent: var(--glowing);
+    --current-text-background: var(--color);
+}
+
+.hidden {
+    display: none;
+}

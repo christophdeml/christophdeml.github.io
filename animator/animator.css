@@ -1,0 +1,33 @@
+.invisible {
+    opacity: 0;
+}
+
+.animation-appear {
+    animation: appear var(--animation-duration) forwards;
+}
+
+.animation-appear-disappear {
+    animation: appear-disappear var(--animation-duration) forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear-disappear {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
