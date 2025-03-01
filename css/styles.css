@@ -1,0 +1,92 @@
+:root {
+    --glowing: rgb(0, 255, 0);
+    --glowing-005: rgba(0, 255, 0, 0.05);
+    --glowing-01: rgba(0, 255, 0, 0.1);
+}
+
+* {
+    transition: opacity .5s;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+body {
+    background-color: black;
+    font-family: "Source Code Pro", monospace;
+    color: white;
+    overflow: hidden;
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 10fr 1fr;
+    animation: glow-color 1s infinite;
+}
+
+header {
+    background: linear-gradient(to bottom, var(--glowing-01) 0%, transparent 100%);
+    align-content: center;
+
+    & nav {
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        & * {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+footer {
+    background: linear-gradient(to top, var(--glowing-01) 0%, transparent 100%);
+}
+
+main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.greeting {
+    display: none;
+}
+
+#current-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    text-shadow: 0 0 1.5rem var(--glowing);
+    text-align: center;
+    align-self: center;
+    padding: 1rem;
+}
+
+#actions {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+
+    & #links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        & img {
+            width: 3rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #current-text {
+        font-size: 3rem;
+        text-shadow: 0 0 1rem var(--glowing);
+    }
+    #actions {
+        font-size: 1rem;
+    }
+}
